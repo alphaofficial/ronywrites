@@ -4,7 +4,8 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "overrides": [
     // Only uses Testing Library lint rules in test files
@@ -49,6 +50,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "jsx-a11y/anchor-is-valid": "off"
   }
 }

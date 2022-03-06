@@ -51,6 +51,7 @@
       }
     ],
     "prettier/prettier": "warn",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/destructuring-assignment": "off"
   }
 }

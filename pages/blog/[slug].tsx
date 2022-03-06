@@ -39,11 +39,10 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: any) => {
-  let post;
   const res: any = await fetchBlogPosts();
   if (res instanceof Error) return null;
   const match = res.find((p: any) => p.fields.slug === params.slug);
-  post = match.fields;
+  const post = match.fields;
   return {
     props: {
       post,

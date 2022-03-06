@@ -15,7 +15,7 @@ const richTextOptions = {
         {children}
       </Text>
     ),
-    [BLOCKS.EMBEDDED_ASSET]: (node: any, children: any) => {
+    [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
       return (
         <Box mb="30px">
           <Image

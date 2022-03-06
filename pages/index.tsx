@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { PageLayout } from "../layout";
@@ -14,7 +14,7 @@ const Home: NextPage<{ bio: any }> = ({ bio }) => {
       </Box>
       <Box>
         {documentToReactComponents(bio, richTextOptions)}
-        <Text></Text>
+        <Text />
       </Box>
     </PageLayout>
   );
@@ -23,7 +23,7 @@ const Home: NextPage<{ bio: any }> = ({ bio }) => {
 export const getStaticProps = async () => {
   const res: any = await fetchBio();
   if (res instanceof Error) return null;
-  const bio = res[0].fields.bio;
+  const { bio } = res[0].fields;
   return {
     props: {
       bio,

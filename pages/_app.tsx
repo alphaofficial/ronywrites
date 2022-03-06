@@ -3,7 +3,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../theme";
 import "@fontsource/quicksand/700.css";
 import "@fontsource/lato/400.css";
-import "simplebar/dist/simplebar.min.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

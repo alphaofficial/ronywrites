@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
-import Home from "../pages/index";
+import { Title } from "..";
 
-describe("Home", () => {
-  it("renders a heading", () => {
-    render(<Home />);
+describe("<Title />", () => {
+  it("renders a title", () => {
+    render(<Title title="My title" />);
 
     const heading = screen.getByRole("heading", {
-      name: /Welcome to blog/i,
+      name: /My title/i,
     });
 
     expect(heading).toBeInTheDocument();

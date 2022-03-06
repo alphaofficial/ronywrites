@@ -28,7 +28,7 @@ const components = {
 
 const fonts = {
   heading: "Quicksand, sans-serif",
-  body: "Raleway, sans-serif",
+  body: "Lato, sans-serif",
 };
 
 const theme = extendTheme({

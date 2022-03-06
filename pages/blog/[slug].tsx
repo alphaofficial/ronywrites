@@ -12,16 +12,16 @@ const Story: NextPage<{ post: any }> = ({ post }) => {
       <Box mb="30px">
         <Box mb="10px">
           <Heading color="gray.600" fontSize="2xl">
-            {post.title}
+            {post?.title}
           </Heading>
         </Box>
         <Box mb="10px">
           <Text color="gray.400" fontWeight="bold">
-            {moment(post.updatedAt).format("DD MMM, YYYY")}
+            {post?.updatedAt && moment(post.updatedAt).format("DD MMM, YYYY")}
           </Text>
         </Box>
         <Box mb="10px">
-          {documentToReactComponents(post.body, richTextOptions)}
+          {post?.body && documentToReactComponents(post.body, richTextOptions)}
         </Box>
       </Box>
     </PageLayout>

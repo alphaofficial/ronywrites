@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import { Mdx } from "src/app/components/mdx";
 import { allBlogs } from "contentlayer/generated";
 import Balancer from "react-wrap-balancer";
-import ViewCounter from "@/app/components/viewCounter";
-import { getAllViews } from "@/app/actions";
 import { Comment } from "@/app/components/comments";
 
 export async function generateMetadata({
@@ -86,8 +84,6 @@ export default async function Blog({ params }) {
     notFound();
   }
 
-  const allViews = await getAllViews();
-
   return (
     <section>
       <script type="application/ld+json" suppressHydrationWarning>
@@ -100,7 +96,6 @@ export default async function Blog({ params }) {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.publishedAt)}
         </p>
-        <ViewCounter allViews={allViews} slug={post.slug} trackView />
       </div>
       <Mdx code={post.body.code} />
       <div className="mt-16">

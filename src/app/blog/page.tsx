@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { allBlogs } from "contentlayer/generated";
-import { getAllViews } from "../actions";
-import ViewCounter from "../components/viewCounter";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -18,7 +16,6 @@ function sortThis(a, b) {
 }
 
 export default async function BlogPage() {
-  const allViews = await getAllViews();
   return (
     <section>
       <h1 className="font-bold text-2xl mb-8">Blog posts</h1>
@@ -32,11 +29,6 @@ export default async function BlogPage() {
             <p className="text-neutral-900 tracking-tight underline">
               {post.title}
             </p>
-            <ViewCounter
-              allViews={allViews}
-              slug={post.slug}
-              trackView={false}
-            />
           </div>
         </Link>
       ))}

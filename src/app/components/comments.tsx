@@ -7,9 +7,9 @@ export function Comment() {
     <Giscus
       id="comments"
       repo="alphaofficial/ronywrites"
-      repoId="R_kgDOKBBv2Q"
+      repoId="R_kgDOG87LtQ"
       category="Announcements"
-      categoryId="DIC_kwDOKBBv2c4CYO-d"
+      categoryId="DIC_kwDOG87Ltc4CYi0-"
       mapping="pathname"
       reactionsEnabled="1"
       emitMetadata="1"

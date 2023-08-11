@@ -6,7 +6,7 @@ name: Create version
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   testRelease:
